@@ -3,6 +3,8 @@ import java.util.ArrayList;
 public class Commande {
     private EtatCommande etatCommande;
     ArrayList<Plat> commande = new ArrayList<Plat>();
+    private String nom;
+    private String addr;
 
     /**
      * constructeur qui initailise l'état de la commande à "CommandeEnCours"
@@ -43,13 +45,18 @@ public class Commande {
         this.etatCommande = etatCommande.etatSuivant();
     }
 
+    public void setNomAddr(String nom, String addr) {
+        this.nom = nom;
+        this.addr = addr;
+    }
+
     /**
      * méthode qui affiche les deux types de ticket via le pattern Strategy
      */
     public void affiche() {
         VueMenu vueClient = new VueMenu(new TicketClient());
         vueClient.dessine(commande);
-        VueMenu vueLivreur = new VueMenu(new TicketLivreur());
+        VueMenu vueLivreur = new VueMenu(new TicketLivreur(nom,addr));
         vueLivreur.dessine(commande);
     }
 }

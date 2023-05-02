@@ -8,7 +8,7 @@ public class TicketClient implements DessinMenu{
         System.out.println("Contenu de la commande :");
         System.out.println("Nom Produit \t Quantité \t Prix Unité \t Prix");
         for (Plat produit : commande) {
-            System.out.println(produit.getNom() + "\t" + produit.getQte() + "\t" + produit.getPrix() + "cfp\t" + produit.getPrix()*produit.getQte() + "cfp");
+            System.out.println(produit.getNom() + " |\t" + produit.getQte() + " |\t" + produit.getPrix() + "cfp |\t" + produit.getPrix()*produit.getQte() + "cfp");
         }
     }
 }
