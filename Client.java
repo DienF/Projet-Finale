@@ -21,41 +21,40 @@ public class Client {
    }
    Commande commande = new Commande();
    while (true){
-      System.out.println("Faites votre choix :");
-      int choix = choixMenu.nextInt();
-      System.out.println("Combien ? : ");
-      int qte = choixMenu.nextInt();
-      commande.ajoutePlat(new Plat(menu[choix-1][1], qte, menu[choix-1][2].hashCode()));
-
-      //TODO Afficher ticket Client
-      //TODO Valider commande ?
-      //TODO Annuler commande ?
-      //TODO Renseigner Addresse et Nom Client
-      //TODO Afficher les tickets si il le faut
-
-      System.out.println("Autre chose ? (o/n) : ");
+      System.out.println("Ajouter ou supprimer un plat (a/s) : ");
+      String action = choixMenu.next();
+      if (action.equals("s")) {
+         if (commande.commande.size() == 0) {
+            System.out.println("Il n'y a rien à supprimer pour l'instant");
+         } else {
+            System.out.println("Numéro du produit à supprimer : ");
+            int choix = choixMenu.nextInt();
+            System.out.println("Quantité : ");
+            int qte = choixMenu.nextInt();
+            commande.retirePlat(new Plat(menu[choix-1][1], qte, Integer.parseInt(menu[choix-1][2])));
+         }
+      } else {
+         System.out.println("Faites votre choix :");
+         int choix = choixMenu.nextInt();
+         System.out.println("Combien ? : ");
+         int qte = choixMenu.nextInt();
+         commande.ajoutePlat(new Plat(menu[choix-1][1], qte, Integer.parseInt(menu[choix-1][2])));
+      }
+      System.out.println("Valider la commande (o/n) ou x pour annuler: ");
       String continueCommande = choixMenu.next();
-      if (continueCommande.equals("n")) {
+      if (continueCommande.equals("o")) {
+         System.out.println("Renseignez votre nom svp : ");
+         String nom = choixMenu.next();
+         System.out.println("Renseignez votre addresse svp : ");
+         String addr = choixMenu.next();
+         commande.setNomAddr(nom, addr);
+         commande.affiche();
+         break;
+      }
+      else if (continueCommande.equals("x")) {
+         commande.annule();
          break;
       }
    }
-   /* Commande commande = new Commande();
-   commande.ajoutePlat(new Plat("BicMac",1,950));
-   commande.ajoutePlat(new Plat("Coca-cola", 2, 350));
-   commande.affiche();
-   commande.etatSuivant();
-   commande.ajoutePlat(new Plat("Petite Frite",8,500));
-   commande.annule();
-   commande.affiche();
-   Commande commande2 = new Commande();
-   commande2.ajoutePlat(new Plat("Cheeseburger",2,850));
-   commande2.ajoutePlat(new Plat("Sprite",2,350));
-   commande2.affiche();
-   commande2.etatSuivant();
-   commande2.affiche();
-   commande2.etatSuivant();
-   commande2.annule();
-   commande2.affiche();*/
-   
  }
 }

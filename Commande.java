@@ -14,18 +14,20 @@ public class Commande {
     }
     /**
      * méthode qui ajoute un plat dans une ArrayList commande
-     * @param produit : Plat
+     * @param plat : Plat
      */
-    public void ajoutePlat(Plat produit) {
-        this.etatCommande.ajoutePlat(commande,produit);
+    public void ajoutePlat(Plat plat) {
+        this.etatCommande.ajoutePlat(commande,plat);
+        System.out.println(plat.getQte() + " " + plat.getNom() + " ajouter au panier avec SUCCES");
     }
 
     /**
      * méthode qui supprime un plat de l'ArrayList commande
-     * @param produit Plat
+     * @param plat Plat
      */
-    public void retirePlat(Plat produit) {
-        this.etatCommande.retirePlat(commande, produit);
+    public void retirePlat(Plat plat) {
+        this.etatCommande.retirePlat(commande, plat);
+        System.out.println(plat.getQte() + " " + plat.getNom() + " retirer du panier avec SUCCES");
     }
 
     /**
@@ -35,6 +37,7 @@ public class Commande {
     public void annule() {
         this.etatCommande.annule(commande);
         this.etatCommande = new CommandeAnnulee();
+        System.out.println("Commande annulée avec SUCCES");
     }
 
     /**
