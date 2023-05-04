@@ -1,5 +1,5 @@
 import java.util.ArrayList;
 
-public interface DessinMenu {
+public interface DessinTicket {
     public void dessine(ArrayList<Plat> commande);
 }

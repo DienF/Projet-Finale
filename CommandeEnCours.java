@@ -1,5 +1,4 @@
-public class CommandeEnCours extends EtatCommande{
-    
+public class CommandeEnCours extends EtatCommande {
     /** 
      * @return EtatCommande
      */

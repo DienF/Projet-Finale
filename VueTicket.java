@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 
-public class VueMenu {
-    private DessinMenu dessin;
+public class VueTicket {
+    private DessinTicket dessin;
 
-    public VueMenu(DessinMenu menu) {
+    public VueTicket(DessinTicket menu) {
         this.dessin = menu;
     }
-
     
     /** 
      * @param commande
@@ -14,5 +13,4 @@ public class VueMenu {
     public void dessine(ArrayList<Plat> commande) {
         dessin.dessine(commande);
     }
-    
 }

@@ -17,8 +17,8 @@ public class Commande {
      * @param plat : Plat
      */
     public void ajoutePlat(Plat plat) {
-        this.etatCommande.ajoutePlat(commande,plat);
-        System.out.println(plat.getQte() + " " + plat.getNom() + " ajouter au panier avec SUCCES");
+        this.etatCommande.ajoutePlat(commande, plat);
+        System.out.println(plat.getQte() + " " + plat.getNom() + " ajouté(e) au panier avec SUCCÈS");
     }
 
     /**
@@ -27,7 +27,7 @@ public class Commande {
      */
     public void retirePlat(Plat plat) {
         this.etatCommande.retirePlat(commande, plat);
-        System.out.println(plat.getQte() + " " + plat.getNom() + " retirer du panier avec SUCCES");
+        System.out.println(plat.getQte() + " " + plat.getNom() + " retiré(e) du panier avec SUCCÈS");
     }
 
     /**
@@ -37,7 +37,7 @@ public class Commande {
     public void annule() {
         this.etatCommande.annule(commande);
         this.etatCommande = new CommandeAnnulee();
-        System.out.println("Commande annulée avec SUCCES");
+        System.out.println("Commande annulée avec SUCCÈS");
     }
 
     /**
@@ -57,9 +57,9 @@ public class Commande {
      * méthode qui affiche les deux types de ticket via le pattern Strategy
      */
     public void affiche() {
-        VueMenu vueClient = new VueMenu(new TicketClient());
+        VueTicket vueClient = new VueTicket(new TicketClient());
         vueClient.dessine(commande);
-        VueMenu vueLivreur = new VueMenu(new TicketLivreur(nom,addr));
+        VueTicket vueLivreur = new VueTicket(new TicketLivreur(nom, addr));
         vueLivreur.dessine(commande);
     }
 }

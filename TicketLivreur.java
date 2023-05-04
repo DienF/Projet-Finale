@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class TicketLivreur implements DessinMenu {
+public class TicketLivreur implements DessinTicket {
     private String nom;
     private String addr;
 
@@ -11,15 +11,19 @@ public class TicketLivreur implements DessinMenu {
 
     @Override
     public void dessine(ArrayList<Plat> commande) {
-        System.out.println("Ticket Livreur");
-        System.out.println("Nom et Adresse de Livraison : " + nom +  " " + addr );
+        System.out.println("\nTicket Livreur");
+        System.out.println("Nom du client : " + nom);
+        System.out.println("Adresse de livraison : : " + addr);
         System.out.println("Contenu de la commande :");
-        System.out.println("Nom Produit \t Quantité");
+        System.out.println("Plat \t\t| Quantité");
         int total = 0;
-        for (Plat produit : commande) {
-            System.out.println(produit.getNom() + "\t" + produit.getQte());
-            total += produit.getPrix()*produit.getQte();
+        for (Plat plat : commande) {
+            System.out.println(
+                plat.getNom() + "\t|\t" +
+                plat.getQte()
+            );
+            total += plat.getPrix() * plat.getQte();
         }
-        System.out.println("Total : " + total + "cfp");
+        System.out.println("Total : " + total + " CFP");
     }
 }

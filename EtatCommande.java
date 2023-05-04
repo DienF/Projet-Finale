@@ -6,7 +6,7 @@ abstract class EtatCommande {
      * @param commande ArrayList<Plat> 
      * @param plat Plat
      */
-    public void ajoutePlat(ArrayList<Plat> commande,Plat plat){
+    public void ajoutePlat(ArrayList<Plat> commande, Plat plat) {
         commande.add(plat);
     };
 
@@ -15,7 +15,7 @@ abstract class EtatCommande {
      * @param commande ArrayList<Plat> 
      * @param plat Plat
      */
-    public void retirePlat(ArrayList<Plat> commande,Plat plat){
+    public void retirePlat(ArrayList<Plat> commande, Plat plat) {
         commande.remove(plat);
     };
 
@@ -23,14 +23,14 @@ abstract class EtatCommande {
      * méthode qui supprime tout les plats dans une ArrayList
      * @param commande ArrayList<Plat>
      */
-    public void annule(ArrayList<Plat> commande){
+    public void annule(ArrayList<Plat> commande) {
         commande.clear();
     };
 
     /**
      * méthode qui fait rien ICI
      */
-    public EtatCommande etatSuivant(){
+    public EtatCommande etatSuivant() {
         return null;
     };
 }

@@ -1,6 +1,4 @@
 public class CommandeValidee extends EtatCommande {
-
-    
     /** 
      * @return EtatCommande
      */

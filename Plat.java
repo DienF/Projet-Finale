@@ -9,17 +9,17 @@ public class Plat {
      * @param qte Entier quantité de plat
      * @param prix Entier prix unitaire du plat
      */
-    public Plat(String nom, int qte, int prix){
+    public Plat(String nom, int qte, int prix) {
         this.nom = nom;
         this.qte = qte;
-        this.prix= prix;
+        this.prix = prix;
     }
 
     /**
      * Getter pour avoir le nom du plat
      * @return String nom du plat
      */
-    public String getNom(){
+    public String getNom() {
         return this.nom;
     }
 
@@ -27,7 +27,7 @@ public class Plat {
      * Getter pour avoir la quantité de plat
      * @return Entier quantité de plat
      */
-    public int getQte(){
+    public int getQte() {
         return this.qte;
     }
 
@@ -35,7 +35,7 @@ public class Plat {
      * Getter pour avoir le prix du plat
      * @return Entier prix du plat
      */
-    public int getPrix(){
+    public int getPrix() {
         return this.prix;
     }
 }
