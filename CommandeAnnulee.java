@@ -9,9 +9,7 @@ public class CommandeAnnulee extends EtatCommande {
     public void ajoutePlat(ArrayList<Plat> commande, Plat plat) {}
 
     @Override
-    public void retirePlat(ArrayList<Plat> commande, Plat plat){
-        commande.remove(plat);
-    }
+    public void retirePlat(ArrayList<Plat> commande, Plat plat){}
 
     @Override
     public void annule(ArrayList<Plat> commande) {}
