@@ -8,7 +8,8 @@ public class VueTicket {
     }
     
     /** 
-     * @param commande
+     * méthode permettant d'afficher l'ArrayList "commande"
+     * @param commande ArrayList<Plat>
      */
     public void dessine(ArrayList<Plat> commande) {
         dessin.dessine(commande);

@@ -9,6 +9,10 @@ public class TicketLivreur implements DessinTicket {
         this.addr = addr;
     }
 
+    /** 
+     * méthode permettant d'afficher l'ArrayList "commande" coté Livreur
+     * @param commande ArrayList<Plat>
+     */
     @Override
     public void dessine(ArrayList<Plat> commande) {
         System.out.println("\nTicket Livreur");

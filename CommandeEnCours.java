@@ -1,6 +1,7 @@
 public class CommandeEnCours extends EtatCommande {
-    /** 
-     * @return EtatCommande
+
+    /**
+     * méthode qui renvoie l'état "CommandeValidee"
      */
     @Override
     public EtatCommande etatSuivant() {

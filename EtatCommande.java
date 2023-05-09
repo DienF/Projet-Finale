@@ -31,7 +31,7 @@ abstract class EtatCommande {
     };
 
     /**
-     * méthode qui fait rien ICI
+     * méthode qui permet de passer la commande à l'état suivant
      */
     public EtatCommande etatSuivant() {
         return null;

@@ -1,6 +1,11 @@
 import java.util.ArrayList;
 
 public class TicketClient implements DessinTicket {
+    
+    /** 
+     * méthode permettant d'afficher l'ArrayList "commande" coté Client
+     * @param commande ArrayList<Plat>
+     */
     @Override
     public void dessine(ArrayList<Plat> commande) {
         System.out.println("\nTicket Client");

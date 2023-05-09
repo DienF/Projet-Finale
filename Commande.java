@@ -45,6 +45,11 @@ public class Commande {
         this.etatCommande = etatCommande.etatSuivant();
     }
 
+    /**
+     * Setter permettant de définir le nom et l'adress
+     * @param nom String nom du client
+     * @param addr String adresse du client
+     */
     public void setNomAddr(String nom, String addr) {
         this.nom = nom;
         this.addr = addr;
