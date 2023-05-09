@@ -6,8 +6,8 @@ public class Client {
       {"2", "Cheeseburger", "850"},
       {"3", "VeganBurger", "800"},
       {"4", "Coca-Cola", "350"},
-      {"5", "Sprite", "350"},
-      {"6", "Eau", "150"},
+      {"5", "Sprite   ", "350"},
+      {"6", "Eau      ", "150"},
       {"7", "Petite Frite", "500"},
       {"8", "Grande Frite", "750"}
    };
@@ -45,12 +45,12 @@ public class Client {
             int qte = choixMenu.nextInt();
             commande.ajoutePlat(new Plat(menu[choix-1][1], qte, Integer.parseInt(menu[choix-1][2])));
          }
-         System.out.println("Valider la commande (o) ou annuler (x) : ");
+         System.out.println("Modifier la commande (m), valider la commande (o) ou annuler (x) : ");
          String continueCommande = choixMenu.next();
          if (continueCommande.equals("o")) {
-            System.out.println("Renseignez votre nom svp : ");
+            System.out.println("Renseignez votre nom SVP : ");
             String nom = choixMenu.next();
-            System.out.println("Renseignez votre adresse svp : ");
+            System.out.println("Renseignez votre adresse SVP : ");
             String addr = choixMenu.next();
             commande.setNomAddr(nom, addr);
             commande.affiche();
