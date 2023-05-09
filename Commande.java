@@ -18,7 +18,6 @@ public class Commande {
      */
     public void ajoutePlat(Plat plat) {
         this.etatCommande.ajoutePlat(commande, plat);
-        System.out.println(plat.getQte() + " " + plat.getNom() + " ajouté(e) au panier avec SUCCÈS");
     }
 
     /**
@@ -27,7 +26,6 @@ public class Commande {
      */
     public void retirePlat(Plat plat) {
         this.etatCommande.retirePlat(commande, plat);
-        System.out.println(plat.getQte() + " " + plat.getNom() + " retiré(e) du panier avec SUCCÈS");
     }
 
     /**
@@ -37,7 +35,6 @@ public class Commande {
     public void annule() {
         this.etatCommande.annule(commande);
         this.etatCommande = new CommandeAnnulee();
-        System.out.println("Commande annulée avec SUCCÈS");
     }
 
     /**

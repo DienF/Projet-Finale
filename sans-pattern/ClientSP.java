@@ -45,9 +45,9 @@ public class ClientSP {
             int qte = choixMenu.nextInt();
             commande.ajoutePlat(new PlatSP(menu[choix-1][1], qte, Integer.parseInt(menu[choix-1][2])));
          }
-         System.out.println("Valider la commande (o) ou annuler (x) : ");
+         System.out.println("Valider la commande (v) ou annuler (x) : ");
          String continueCommande = choixMenu.next();
-         if (continueCommande.equals("o")) {
+         if (continueCommande.equals("v")) {
             System.out.println("Renseignez votre nom svp : ");
             String nom = choixMenu.next();
             System.out.println("Renseignez votre addresse svp : ");

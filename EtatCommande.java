@@ -8,6 +8,7 @@ abstract class EtatCommande {
      */
     public void ajoutePlat(ArrayList<Plat> commande, Plat plat) {
         commande.add(plat);
+        System.out.println(plat.getQte() + " " + plat.getNom() + " ajouté(e) au panier avec SUCCÈS");
     };
 
     /**
@@ -17,6 +18,7 @@ abstract class EtatCommande {
      */
     public void retirePlat(ArrayList<Plat> commande, Plat plat) {
         commande.remove(plat);
+        System.out.println(plat.getQte() + " " + plat.getNom() + " retiré(e) du panier avec SUCCÈS");
     };
 
     /**
@@ -25,6 +27,7 @@ abstract class EtatCommande {
      */
     public void annule(ArrayList<Plat> commande) {
         commande.clear();
+        System.out.println("Commande annulée avec SUCCÈS");
     };
 
     /**

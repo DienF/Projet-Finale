@@ -13,7 +13,7 @@ public class TicketLivreur implements DessinTicket {
     public void dessine(ArrayList<Plat> commande) {
         System.out.println("\nTicket Livreur");
         System.out.println("Nom du client : " + nom);
-        System.out.println("Adresse de livraison : : " + addr);
+        System.out.println("Adresse de livraison : " + addr);
         System.out.println("Contenu de la commande :");
         System.out.println("Plat \t\t| Quantité");
         int total = 0;

@@ -50,14 +50,12 @@ public class Client {
          if (continueCommande.equals("o")) {
             System.out.println("Renseignez votre nom svp : ");
             String nom = choixMenu.next();
-            System.out.println("Renseignez votre addresse svp : ");
+            System.out.println("Renseignez votre adresse svp : ");
             String addr = choixMenu.next();
             commande.setNomAddr(nom, addr);
             commande.affiche();
-            break;
          } else if (continueCommande.equals("x")) {
             commande.annule();
-            break;
          }
       }
    }
