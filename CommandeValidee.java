@@ -26,7 +26,7 @@ public class CommandeValidee extends EtatCommande {
      * @param plat Plat
      */
     @Override
-    public void retirePlat(ArrayList<Plat> commande, Plat plat){
+    public void retirePlat(ArrayList<Plat> commande, String nomPlat){
         System.out.println("Commande validée impossible de supprimer un plat");
     }
 }

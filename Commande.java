@@ -24,7 +24,7 @@ public class Commande {
      * méthode qui supprime un plat de l'ArrayList commande
      * @param plat Plat
      */
-    public void retirePlat(Plat plat) {
+    public void retirePlat(String plat) {
         this.etatCommande.retirePlat(commande, plat);
     }
 

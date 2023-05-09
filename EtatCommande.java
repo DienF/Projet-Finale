@@ -16,9 +16,16 @@ abstract class EtatCommande {
      * @param commande ArrayList<Plat> 
      * @param plat Plat
      */
-    public void retirePlat(ArrayList<Plat> commande, Plat plat) {
-        commande.remove(plat);
-        System.out.println(plat.getQte() + " " + plat.getNom() + " retiré(e) du panier avec SUCCÈS");
+    public void retirePlat(ArrayList<Plat> commande, String nomPlat) {
+        Plat res = null;
+        for (Plat plat : commande) {
+            if (plat.getNom().equals(nomPlat)) {
+                System.out.println(plat.getQte() + " " + plat.getNom() + " retiré(e) du panier avec SUCCÈS");
+                res = plat;
+                break;
+            }
+        }
+        commande.remove(res);
     };
 
     /**

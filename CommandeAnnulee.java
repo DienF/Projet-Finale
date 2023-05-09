@@ -18,7 +18,7 @@ public class CommandeAnnulee extends EtatCommande {
      * @param plat Plat
      */
     @Override
-    public void retirePlat(ArrayList<Plat> commande, Plat plat){
+    public void retirePlat(ArrayList<Plat> commande, String nomPlat){
         System.out.println("Commande annulée impossible de retirer un plat");
     }
 

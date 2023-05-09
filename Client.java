@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class Client {
    static String[][] menu = {
-      {"1", "BigMac", "950"},
+      {"1", "BigMac      ", "950"},
       {"2", "Cheeseburger", "850"},
-      {"3", "VeganBurger", "800"},
-      {"4", "Coca-Cola", "350"},
-      {"5", "Sprite   ", "350"},
-      {"6", "Eau      ", "150"},
+      {"3", "VeganBurger ", "800"},
+      {"4", "Coca-Cola   ", "350"},
+      {"5", "Sprite      ", "350"},
+      {"6", "Eau         ", "150"},
       {"7", "Petite Frite", "500"},
       {"8", "Grande Frite", "750"}
    };
@@ -34,9 +34,7 @@ public class Client {
             } else {
                System.out.println("Numéro du produit à supprimer : ");
                int choix = choixMenu.nextInt();
-               System.out.println("Quantité : ");
-               int qte = choixMenu.nextInt();
-               commande.retirePlat(new Plat(menu[choix-1][1], qte, Integer.parseInt(menu[choix-1][2])));
+               commande.retirePlat(menu[choix-1][1]);
             }
          } else {
             System.out.println("Faites votre choix :");
@@ -45,15 +43,17 @@ public class Client {
             int qte = choixMenu.nextInt();
             commande.ajoutePlat(new Plat(menu[choix-1][1], qte, Integer.parseInt(menu[choix-1][2])));
          }
-         System.out.println("Modifier la commande (m), valider la commande (o) ou annuler (x) : ");
+         System.out.println("Modifier(m), valider(v) ou annuler (x) la commande : ");
          String continueCommande = choixMenu.next();
-         if (continueCommande.equals("o")) {
+         if (continueCommande.equals("v")) {
             System.out.println("Renseignez votre nom SVP : ");
             String nom = choixMenu.next();
             System.out.println("Renseignez votre adresse SVP : ");
             String addr = choixMenu.next();
             commande.setNomAddr(nom, addr);
             commande.affiche();
+            System.out.println("Commande livrée");
+            commande.etatSuivant();
          } else if (continueCommande.equals("x")) {
             commande.annule();
          }
